@@ -1,0 +1,121 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "firstName": "vivek",
+      "lastName": "kala",
+      "contactNumber": "098685 74786",
+      "email": "vivekkala123@gmail.com",
+      "dob": "2021-07-30T18:30:00.000Z",
+      "address": {
+        "street": "103-C, Chandu Park",
+        "state": "Delhi",
+        "pin": "110051"
+      }
+    },
+    {
+      "firstName": "vivek",
+      "lastName": "kala",
+      "contactNumber": "076976 76762",
+      "email": "vivek",
+      "dob": "1998-08-17T18:30:00.000Z",
+      "address": {
+        "street": "103-C, Chandu Park",
+        "state": "Delhi",
+        "pin": "110051"
+      },
+      "id": 2
+    },
+    {
+      "firstName": "vivek",
+      "lastName": "kala",
+      "contactNumber": "06587 575 878",
+      "email": "vivekkala@gmail.com",
+      "dob": "1998-08-17T18:30:00.000Z",
+      "address": {
+        "street": "103-C, Chandu Park",
+        "state": "Delhi",
+        "pin": "110051"
+      },
+      "id": 3
+    },
+    {
+      "firstName": "vivek",
+      "lastName": "kala",
+      "contactNumber": "075757 46757",
+      "email": "vivekkala123@gmail.com",
+      "dob": "2021-07-13T18:30:00.000Z",
+      "address": {
+        "street": "103-C, Chandu Park",
+        "state": "Delhi",
+        "pin": "110051"
+      },
+      "id": 4
+    },
+    {
+      "firstName": "vivek",
+      "lastName": "kala",
+      "contactNumber": "088686 75771",
+      "email": "vivekkala1808@gmail.com",
+      "dob": "2021-07-04T18:30:00.000Z",
+      "address": {
+        "street": "103-C, Chandu Park",
+        "state": "Delhi",
+        "pin": "110051"
+      },
+      "id": 5
+    },
+    {
+      "firstName": "vuv",
+      "lastName": "kala",
+      "contactNumber": "098775 64655",
+      "email": "vivekkala@gmail.com",
+      "dob": "2021-07-25T18:30:00.000Z",
+      "address": {
+        "street": "103-C, Chandu Park",
+        "state": "Delhi",
+        "pin": "110051"
+      },
+      "id": 6
+    },
+    {
+      "firstName": "vivek",
+      "lastName": "kala",
+      "contactNumber": "076757 58588",
+      "email": "vivek@g.com",
+      "dob": "2021-07-04T18:30:00.000Z",
+      "address": {
+        "street": "103-C, Chandu Park",
+        "state": "Delhi",
+        "pin": "110051"
+      },
+      "id": 7
+    },
+    {
+      "firstName": "shivam",
+      "lastName": "kala",
+      "contactNumber": "086858 58579",
+      "email": "dah@h.com",
+      "dob": "2021-05-06T18:30:00.000Z",
+      "address": {
+        "street": "103-C, Chandu Park",
+        "state": "Delhi",
+        "pin": "110051"
+      },
+      "id": 8
+    },
+    {
+      "firstName": "kunal",
+      "lastName": "bisht",
+      "contactNumber": "075854 83693",
+      "email": "kunal@gmail.com",
+      "dob": "2021-05-25T18:30:00.000Z",
+      "address": {
+        "street": "103-C, Chandu Park",
+        "state": "Delhi",
+        "pin": "110051"
+      },
+      "id": 9
+    }
+  ]
+}

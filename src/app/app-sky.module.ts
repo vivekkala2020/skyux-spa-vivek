@@ -8,7 +8,8 @@ import {
 
 import {
   SkyAlertModule,
-  SkyKeyInfoModule
+  SkyKeyInfoModule,
+  SkyStatusIndicatorModule
 } from '@skyux/indicators';
 
 import {
@@ -19,13 +20,36 @@ import {
   SkyNavbarModule
 } from '@skyux/navbar';
 
+import {
+  SkyCardModule
+} from '@skyux/layout';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { SkyDatepickerModule } from '@skyux/datetime';
+import { SkyIdModule } from '@skyux/core';
+import { SkyInputBoxModule } from '@skyux/forms';
+import { SkyPhoneFieldModule } from '@skyux/phone-field';
+import { SkyEmailValidationModule } from '@skyux/validation';
+import { UserService } from './services/user.service';
+import { CommonModule } from '@angular/common';
+
 @NgModule({
   exports: [
     SkyAvatarModule,
     SkyAlertModule,
     SkyKeyInfoModule,
     SkyFluidGridModule,
-    SkyNavbarModule
-  ]
+    SkyNavbarModule,
+    SkyCardModule,
+    SkyDatepickerModule,
+    SkyIdModule,
+    SkyInputBoxModule,
+    SkyPhoneFieldModule,
+    SkyStatusIndicatorModule,
+    ReactiveFormsModule,
+    SkyEmailValidationModule,
+    FormsModule,
+    CommonModule
+  ],
+  providers: [UserService]
 })
 export class AppSkyModule { }
