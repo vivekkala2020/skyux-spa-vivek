@@ -38,6 +38,7 @@
     "@skyux/datetime": "4.12.0",
     "@skyux/errors": "4.0.1",
     "@skyux/forms": "4.20.0",
+    "@skyux/grids": "4.0.6",
     "@skyux/http": "4.2.0",
     "@skyux/i18n": "4.2.1",
     "@skyux/indicators": "4.10.0",
@@ -49,6 +50,8 @@
     "@skyux/router": "4.2.2",
     "@skyux/theme": "4.17.0",
     "@skyux/validation": "4.0.1",
+    "ag-grid-angular": "^25.3.0",
+    "ag-grid-community": "^25.3.0",
     "rxjs": "6.6.7",
     "zone.js": "0.10.3"
   },

@@ -31,6 +31,7 @@ import { SkyPhoneFieldModule } from '@skyux/phone-field';
 import { SkyEmailValidationModule } from '@skyux/validation';
 import { UserService } from './services/user.service';
 import { CommonModule } from '@angular/common';
+import { SkyGridModule } from '@skyux/grids';
 
 @NgModule({
   exports: [
@@ -48,7 +49,8 @@ import { CommonModule } from '@angular/common';
     ReactiveFormsModule,
     SkyEmailValidationModule,
     FormsModule,
-    CommonModule
+    CommonModule,
+    SkyGridModule
   ],
   providers: [UserService]
 })

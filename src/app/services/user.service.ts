@@ -13,7 +13,7 @@ export class UserService {
     return this.http.post<any>('http://localhost:3000/users', data);
   }
 
-  public getUser(): Observable<User> {
-    return this.http.get<any>('http://localhost:3000/users');
+  public getUser(): Observable<User[]> {
+    return this.http.get<User[]>('http://localhost:3000/users');
   }
 }

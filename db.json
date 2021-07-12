@@ -116,6 +116,45 @@
         "pin": "110051"
       },
       "id": 9
+    },
+    {
+      "firstName": "vivek",
+      "lastName": "kala",
+      "contactNumber": "098765 45678",
+      "email": "vivekkala@gmail.com",
+      "dob": "2021-06-09T18:30:00.000Z",
+      "address": {
+        "street": "103-C, Chandu Park",
+        "state": "Delhi",
+        "pin": "110051"
+      },
+      "id": 10
+    },
+    {
+      "firstName": "vivek",
+      "lastName": "kala",
+      "contactNumber": "097875 76789",
+      "email": "vivek@gmail.com",
+      "dob": "2021-07-10T18:30:00.000Z",
+      "address": {
+        "street": "103-C, Chandu Park",
+        "state": "Delhi",
+        "pin": "110051"
+      },
+      "id": 11
+    },
+    {
+      "firstName": "shivam ",
+      "lastName": "kumar",
+      "contactNumber": "078485 65994",
+      "email": "shivam@gmail.com",
+      "dob": "1998-08-17T18:30:00.000Z",
+      "address": {
+        "street": "103-C, Chandu Park",
+        "state": "Delhi",
+        "pin": "110051"
+      },
+      "id": 12
     }
   ]
 }

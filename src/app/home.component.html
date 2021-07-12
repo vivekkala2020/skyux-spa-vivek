@@ -1,5 +1,6 @@
 <app-nav>
 </app-nav>
+
 <sky-row>
   <sky-column
     screenSmall="1"
@@ -17,19 +18,19 @@
         <label class="sky-control-label" for="myInput">First Name</label>
         <input formControlName="firstName" class="sky-form-control" id="myInput" type="text">
       </sky-input-box>
-      <div *ngIf="f.firstName.touched && f.firstName.invalid" class="alert alert-danger">
+      <ng-container *ngIf="f.firstName.touched && f.firstName.invalid" class="alert alert-danger">
         <div *ngIf="f.firstName.errors.required">First Name is Required</div>
         <div *ngIf="f.firstName.errors.maxLength || f.firstName.errors.pattern">First Name can only contains characters and Not Exceed 20 characters</div>
-      </div>
+      </ng-container>
 
       <sky-input-box>
         <label class="sky-control-label" for="myInput">Last Name</label>
         <input formControlName="lastName" class="sky-form-control" id="myInput" type="text">
       </sky-input-box>
-      <div *ngIf="f.lastName.touched && f.lastName.invalid" class="alert alert-danger">
+      <ng-container *ngIf="f.lastName.touched && f.lastName.invalid" class="alert alert-danger">
         <div *ngIf="f.lastName.errors.required">Last Name is Required</div>
         <div *ngIf="f.lastName.errors.maxLength || f.lastName.errors.pattern">Last Name can only contains characters and Not Exceed 20 characters</div>
-      </div>
+      </ng-container>
 
       <sky-input-box>
         <label class="sky-control-label">Email</label>
@@ -58,10 +59,10 @@
           />
         </sky-datepicker>
       </sky-input-box>
-      <div *ngIf="f.dob.touched && f.dob.invalid" class="alert alert-danger">
+      <ng-container *ngIf="f.dob.touched && f.dob.invalid" class="alert alert-danger">
         <div *ngIf="f.dob.errors.required">Date of Birth is required</div>
         <div *ngIf="f.dob.errors.skyDate">Invalid Date of Birth</div>
-      </div>
+      </ng-container>
 
       <sky-input-box>
          <label class="sky-control-label" for="myInput">Contact Number</label>
@@ -83,27 +84,27 @@
       <label class="sky-control-label" for="myInput">House No. & Street</label>
       <input formControlName="street" class="sky-form-control" id="myInput" type="text">
     </sky-input-box>
-    <div *ngIf="streetControl.touched && streetControl.invalid" class="alert alert-danger">
+    <ng-container *ngIf="streetControl.touched && streetControl.invalid" class="alert alert-danger">
       <div *ngIf="streetControl.errors.required">Can't be Empty</div>
-    </div>
+    </ng-container>
 
     <sky-input-box>
       <label class="sky-control-label" for="myInput">State</label>
       <input formControlName="state" class="sky-form-control" id="myInput" type="text">
     </sky-input-box>
-    <div *ngIf="stateControl.touched && stateControl.invalid" class="alert alert-danger">
+    <ng-container *ngIf="stateControl.touched && stateControl.invalid" class="alert alert-danger">
       <div *ngIf="stateControl.errors.required">State is required</div>
       <div *ngIf="stateControl.errors.pattern">Invalid state</div>
-    </div>
+    </ng-container>
 
     <sky-input-box>
       <label class="sky-control-label" for="myInput">Pin Code</label>
       <input formControlName="pin" class="sky-form-control" id="myInput" type="text">
     </sky-input-box>
-    <div *ngIf="pincodeControl.touched && pincodeControl.invalid" class="alert alert-danger">
+    <ng-container *ngIf="pincodeControl.touched && pincodeControl.invalid" class="alert alert-danger">
       <div *ngIf="pincodeControl.errors.required">Pincode is required</div>
       <div *ngIf="pincodeControl.errors.pattern">Invalid pincode</div>
-    </div>
+    </ng-container>
   </div>
     <button type="submit" class="sky-btn sky-btn-primary" [disabled]="!userProfile.valid">Submit</button>
     </form>
@@ -114,3 +115,64 @@
 </sky-row>
 <br><br><br><br><br>
 
+<sky-row>
+  <sky-column
+    screenSmall="1"
+  >
+  </sky-column>
+  <sky-column
+    screenSmall="10"
+  >
+<sky-grid
+  fit="scroll"
+  [data]="data"
+  (sortFieldChange)="onSortChangeForGrid($event)"
+>
+  <sky-grid-column
+    field="firstName"
+    heading="First Name"
+  >
+  </sky-grid-column>
+  <sky-grid-column
+    field="lastName"
+    heading="Last Name"
+  >
+  </sky-grid-column>
+  <sky-grid-column
+    field="email"
+    heading="Email"
+  >
+  </sky-grid-column>
+  <sky-grid-column
+    field="contactNumber"
+    heading="Mobile Number"
+  >
+  </sky-grid-column>
+  <sky-grid-column
+    field="dob"
+    heading="Date of Birth"
+  >
+  </sky-grid-column>
+  <sky-grid-column
+    field="address.street"
+    heading="House Number & Street"
+  >
+  </sky-grid-column>
+  <sky-grid-column
+    field="address.pin"
+    heading="Pincode"
+  >
+  </sky-grid-column>
+  <sky-grid-column
+    field="address.state"
+    heading="State"
+  >
+  </sky-grid-column>
+</sky-grid>
+
+</sky-column>
+<sky-column
+    screenSmall="1"
+  >
+  </sky-column>
+</sky-row>
