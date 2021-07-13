@@ -9,8 +9,9 @@ import { User } from '../models/user';
 export class UserService {
 
   constructor(private http: HttpClient) { }
+
   public saveUser(data: User): Observable<User> {
-    return this.http.post<any>('http://localhost:3000/users', data);
+    return this.http.post<User>('http://localhost:3000/users', data);
   }
 
   public getUser(): Observable<User[]> {

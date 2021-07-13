@@ -13,7 +13,7 @@ import {
 } from '@skyux/indicators';
 
 import {
-  SkyFluidGridModule
+  SkyFluidGridModule, SkyToolbarModule
 } from '@skyux/layout';
 
 import {
@@ -32,6 +32,8 @@ import { SkyEmailValidationModule } from '@skyux/validation';
 import { UserService } from './services/user.service';
 import { CommonModule } from '@angular/common';
 import { SkyGridModule } from '@skyux/grids';
+import { SkyAgGridModule } from '@skyux/ag-grid';
+import { SkyModalModule } from '@skyux/modals';
 
 @NgModule({
   exports: [
@@ -50,7 +52,11 @@ import { SkyGridModule } from '@skyux/grids';
     SkyEmailValidationModule,
     FormsModule,
     CommonModule,
-    SkyGridModule
+    SkyGridModule,
+    SkyAgGridModule,
+
+    SkyToolbarModule,
+    SkyModalModule
   ],
   providers: [UserService]
 })

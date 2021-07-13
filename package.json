@@ -30,6 +30,7 @@
     "@angular/platform-browser-dynamic": "9.1.13",
     "@angular/router": "9.1.13",
     "@blackbaud/auth-client": "2.48.0",
+    "@skyux/ag-grid": "4.8.2",
     "@skyux/animations": "4.0.1",
     "@skyux/assets": "4.0.1",
     "@skyux/avatar": "4.1.3",
