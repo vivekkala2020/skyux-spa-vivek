@@ -13,7 +13,7 @@
 
       <sky-input-box>
         <label class="sky-control-label" for="myInput">First Name</label>
-        <input formControlName="firstName" class="sky-form-control" id="myInput" type="text">
+        <input formControlName="firstName" class="sky-form-control" type="text">
       </sky-input-box>
       <ng-container *ngIf="f.firstName.touched && f.firstName.invalid" class="alert alert-danger">
         <div *ngIf="f.firstName.errors.required">First Name is Required</div>
@@ -22,7 +22,7 @@
 
       <sky-input-box>
         <label class="sky-control-label" for="myInput">Last Name</label>
-        <input formControlName="lastName" class="sky-form-control" id="myInput" type="text">
+        <input formControlName="lastName" class="sky-form-control" type="text">
       </sky-input-box>
       <ng-container *ngIf="f.lastName.touched && f.lastName.invalid" class="alert alert-danger">
         <div *ngIf="f.lastName.errors.required">Last Name is Required</div>
@@ -79,7 +79,7 @@
 
     <sky-input-box>
       <label class="sky-control-label" for="myInput">House No. & Street</label>
-      <input formControlName="street" class="sky-form-control" id="myInput" type="text">
+      <input formControlName="street" class="sky-form-control" type="text">
     </sky-input-box>
     <ng-container *ngIf="streetControl.touched && streetControl.invalid" class="alert alert-danger">
       <div *ngIf="streetControl.errors.required">Can't be Empty</div>
@@ -87,7 +87,7 @@
 
     <sky-input-box>
       <label class="sky-control-label" for="myInput">State</label>
-      <input formControlName="state" class="sky-form-control" id="myInput" type="text">
+      <input formControlName="state" class="sky-form-control" type="text">
     </sky-input-box>
     <ng-container *ngIf="stateControl.touched && stateControl.invalid" class="alert alert-danger">
       <div *ngIf="stateControl.errors.required">State is required</div>
@@ -96,7 +96,7 @@
 
     <sky-input-box>
       <label class="sky-control-label" for="myInput">Pin Code</label>
-      <input formControlName="pin" class="sky-form-control" id="myInput" type="text">
+      <input formControlName="pin" class="sky-form-control" type="text">
     </sky-input-box>
     <ng-container *ngIf="pincodeControl.touched && pincodeControl.invalid" class="alert alert-danger">
       <div *ngIf="pincodeControl.errors.required">Pincode is required</div>

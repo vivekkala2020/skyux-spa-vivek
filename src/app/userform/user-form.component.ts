@@ -3,8 +3,8 @@ import {
 } from '@angular/core';
 import { AbstractControl, FormBuilder, Validators } from '@angular/forms';
 import { SkyValidators } from '@skyux/validation';
-import { UserService } from '../services/user.service';
 import { User } from '../models/user';
+import { UserService } from '../services/user.service';
 
 @Component({
   selector: 'app-user-form',
