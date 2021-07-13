@@ -1,0 +1,112 @@
+<sky-row>
+  <sky-column
+    screenSmall="1"
+  >
+  </sky-column>
+  <sky-column
+    screenSmall="10"
+  >
+  <main>
+    <h2>Enter Details</h2>
+
+    <form novalidate [formGroup]="userProfile" (ngSubmit)="onSubmit()">
+
+      <sky-input-box>
+        <label class="sky-control-label" for="myInput">First Name</label>
+        <input formControlName="firstName" class="sky-form-control" id="myInput" type="text">
+      </sky-input-box>
+      <ng-container *ngIf="f.firstName.touched && f.firstName.invalid" class="alert alert-danger">
+        <div *ngIf="f.firstName.errors.required">First Name is Required</div>
+        <div *ngIf="f.firstName.errors.maxLength || f.firstName.errors.pattern">First Name can only contains characters and Not Exceed 20 characters</div>
+      </ng-container>
+
+      <sky-input-box>
+        <label class="sky-control-label" for="myInput">Last Name</label>
+        <input formControlName="lastName" class="sky-form-control" id="myInput" type="text">
+      </sky-input-box>
+      <ng-container *ngIf="f.lastName.touched && f.lastName.invalid" class="alert alert-danger">
+        <div *ngIf="f.lastName.errors.required">Last Name is Required</div>
+        <div *ngIf="f.lastName.errors.maxLength || f.lastName.errors.pattern">Last Name can only contains characters and Not Exceed 20 characters</div>
+      </ng-container>
+
+      <sky-input-box>
+        <label class="sky-control-label">Email</label>
+        <input formControlName="email" class="sky-form-control">
+      </sky-input-box>
+      <ng-container *ngIf="emailControl.errors && emailControl.touched">
+
+      <div *ngIf="emailControl.errors.required"
+        class="sky-error-label"
+      >
+        Email address is required.
+      </div>
+
+      <div *ngIf="emailControl.errors.skyEmail && emailControl.dirty"
+        class="sky-error-label"
+      >
+        Enter a valid email in the "joe@abc.com" format.
+      </div>
+
+    </ng-container>
+
+      <sky-input-box>
+        <label class="sky-control-label">Date of Birth</label>
+        <sky-datepicker>
+          <input formControlName="dob" [maxDate]="todaysDate" id="myDate" skyDatepickerInput type="text"
+          />
+        </sky-datepicker>
+      </sky-input-box>
+      <ng-container *ngIf="f.dob.touched && f.dob.invalid" class="alert alert-danger">
+        <div *ngIf="f.dob.errors.required">Date of Birth is required</div>
+        <div *ngIf="f.dob.errors.skyDate">Invalid Date of Birth</div>
+      </ng-container>
+
+      <sky-input-box>
+         <label class="sky-control-label" for="myInput">Contact Number</label>
+        <sky-phone-field [defaultCountry]="'in'">
+          <input formControlName="contactNumber" skyPhoneFieldInput>
+        </sky-phone-field>
+      </sky-input-box>
+
+      <sky-status-indicator *ngIf="!phoneControl.valid"
+      descriptionType="none"
+      indicatorType="danger"
+    >
+      Enter a phone number matching the format for the selected country.
+    </sky-status-indicator>
+    <h2>Address</h2>
+     <div formGroupName="address">
+
+    <sky-input-box>
+      <label class="sky-control-label" for="myInput">House No. & Street</label>
+      <input formControlName="street" class="sky-form-control" id="myInput" type="text">
+    </sky-input-box>
+    <ng-container *ngIf="streetControl.touched && streetControl.invalid" class="alert alert-danger">
+      <div *ngIf="streetControl.errors.required">Can't be Empty</div>
+    </ng-container>
+
+    <sky-input-box>
+      <label class="sky-control-label" for="myInput">State</label>
+      <input formControlName="state" class="sky-form-control" id="myInput" type="text">
+    </sky-input-box>
+    <ng-container *ngIf="stateControl.touched && stateControl.invalid" class="alert alert-danger">
+      <div *ngIf="stateControl.errors.required">State is required</div>
+      <div *ngIf="stateControl.errors.pattern">Invalid state</div>
+    </ng-container>
+
+    <sky-input-box>
+      <label class="sky-control-label" for="myInput">Pin Code</label>
+      <input formControlName="pin" class="sky-form-control" id="myInput" type="text">
+    </sky-input-box>
+    <ng-container *ngIf="pincodeControl.touched && pincodeControl.invalid" class="alert alert-danger">
+      <div *ngIf="pincodeControl.errors.required">Pincode is required</div>
+      <div *ngIf="pincodeControl.errors.pattern">Invalid pincode</div>
+    </ng-container>
+  </div>
+    <button type="submit" class="sky-btn sky-btn-primary" [disabled]="!userProfile.valid">Submit</button>
+    </form>
+  </main>
+  </sky-column>
+  <sky-column screenSmall="1">
+  </sky-column>
+</sky-row>
