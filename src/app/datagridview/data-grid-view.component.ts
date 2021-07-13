@@ -126,6 +126,7 @@ export class DataGridViewComponent implements OnInit {
       }
     );
   }
+
   public onGridReady(gridReadyEvent: GridReadyEvent): void {
     this.gridApi = gridReadyEvent.api;
 

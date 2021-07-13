@@ -35,7 +35,8 @@ export class DataGridEditModalComponent implements OnInit {
       },
       {
         field: 'lastName',
-        headerName: 'Last Name'
+        headerName: 'Last Name',
+        editable: true
       },
       {
         field: 'email',
@@ -50,19 +51,24 @@ export class DataGridEditModalComponent implements OnInit {
       {
         field: 'contactNumber',
         headerName: 'Mobile Number',
-        type: SkyCellType.Number
+        type: SkyCellType.Number,
+        editable: true
       },
       {
         field: 'address.street',
-        headerName: 'House No. & Street'
+        headerName: 'House No. & Street',
+        editable: true
       },
       {
         field: 'address.pin',
-        headerName: 'Pincode'
+        headerName: 'Pincode',
+        type: SkyCellType.Number,
+        editable: true
       },
       {
         field: 'address.state',
-        headerName: 'State'
+        headerName: 'State',
+        editable: true
       }
     ];
 

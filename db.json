@@ -155,6 +155,45 @@
         "pin": "110051"
       },
       "id": 12
+    },
+    {
+      "firstName": "karan",
+      "lastName": "kala",
+      "contactNumber": "06757 647 567",
+      "email": "karan@gmail.com",
+      "dob": "2021-07-05T18:30:00.000Z",
+      "address": {
+        "street": "103-C, Chandu Park",
+        "state": "Delhi",
+        "pin": "110051"
+      },
+      "id": 13
+    },
+    {
+      "firstName": "kishan",
+      "lastName": "kumar",
+      "contactNumber": "076767 65434",
+      "email": "kishan@gmail.com",
+      "dob": "1997-08-17T18:30:00.000Z",
+      "address": {
+        "street": "103-C, Chandu Park",
+        "state": "Delhi",
+        "pin": "110051"
+      },
+      "id": 14
+    },
+    {
+      "firstName": "Amit",
+      "lastName": "Singh",
+      "contactNumber": "076853 86435",
+      "email": "amit@gmail.com",
+      "dob": "2021-06-25T18:30:00.000Z",
+      "address": {
+        "street": "55, Dilshad Garden",
+        "state": "Delhi",
+        "pin": "110051"
+      },
+      "id": 15
     }
   ]
 }

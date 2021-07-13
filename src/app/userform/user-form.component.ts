@@ -2,6 +2,7 @@ import {
   Component
 } from '@angular/core';
 import { AbstractControl, FormBuilder, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { SkyValidators } from '@skyux/validation';
 import { User } from '../models/user';
 import { UserService } from '../services/user.service';
@@ -43,7 +44,7 @@ export class UserFormComponent {
 
   public data: User[];
 
-  constructor(private formBuilder: FormBuilder, private userService: UserService) {
+  constructor(private formBuilder: FormBuilder, private userService: UserService, public router: Router) {
     this.todaysDate = new Date();
    }
 
@@ -92,6 +93,7 @@ export class UserFormComponent {
         response => {
           console.log('hello');
           console.log(response);
+          this.reloadComponent();
           return;
         },
         err => {
@@ -101,5 +103,12 @@ export class UserFormComponent {
       );
     }
   }
+
+  public reloadComponent() {
+    let currentUrl = this.router.url;
+        this.router.routeReuseStrategy.shouldReuseRoute = () => false;
+        this.router.onSameUrlNavigation = 'reload';
+        this.router.navigate([currentUrl]);
+    }
 
 }
