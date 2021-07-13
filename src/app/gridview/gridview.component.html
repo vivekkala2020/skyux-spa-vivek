@@ -1,0 +1,61 @@
+<sky-row>
+  <sky-column
+    screenSmall="1"
+  >
+  </sky-column>
+  <sky-column
+    screenSmall="10"
+  >
+<sky-grid
+  fit="scroll"
+  [data]="data"
+  (sortFieldChange)="onSortChangeForGrid($event)"
+>
+  <sky-grid-column
+    field="firstName"
+    heading="First Name"
+  >
+  </sky-grid-column>
+  <sky-grid-column
+    field="lastName"
+    heading="Last Name"
+  >
+  </sky-grid-column>
+  <sky-grid-column
+    field="email"
+    heading="Email"
+  >
+  </sky-grid-column>
+  <sky-grid-column
+    field="contactNumber"
+    heading="Mobile Number"
+  >
+  </sky-grid-column>
+  <sky-grid-column
+    field="dob"
+    heading="Date of Birth"
+  >
+  </sky-grid-column>
+  <sky-grid-column
+    field="address.street"
+    heading="House Number & Street"
+  >
+  </sky-grid-column>
+  <sky-grid-column
+    field="address.pin"
+    heading="Pincode"
+  >
+  </sky-grid-column>
+  <sky-grid-column
+    field="address.state"
+    heading="State"
+  >
+  </sky-grid-column>
+</sky-grid>
+
+</sky-column>
+<sky-column
+    screenSmall="1"
+  >
+  </sky-column>
+</sky-row>
