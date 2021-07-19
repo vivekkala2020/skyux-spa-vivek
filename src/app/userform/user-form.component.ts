@@ -14,7 +14,7 @@ import { UserService } from '../services/user.service';
 })
 export class UserFormComponent {
 
-  private userProfile = this.formBuilder.group({
+  public userProfile = this.formBuilder.group({
     firstName: ['', [Validators.required,
                     Validators.maxLength(20),
                     Validators.pattern('^[a-zA-Z ]*$')]
@@ -44,7 +44,9 @@ export class UserFormComponent {
 
   public data: User[];
 
-  constructor(private formBuilder: FormBuilder, private userService: UserService, public router: Router) {
+  constructor(private formBuilder: FormBuilder,
+              private userService: UserService,
+              private router: Router) {
     this.todaysDate = new Date();
    }
 
@@ -68,40 +70,15 @@ export class UserFormComponent {
   }
 
   public onSubmit(): void {
-    // TODO: Use EventEmitter with form value
-    console.log(this.userProfile.value);
     this.saveUserData();
   }
 
-  public getAllUsers(): void {
-    this.userService.getUser().subscribe(
-      response => {
-        console.log(response);
-        this.data = response;
-        return;
-      },
-      err => {
-        console.log('Hello Error ' + err);
-        return;
-      }
-    );
-  }
-
   public saveUserData(): void {
-    if (this.userProfile.valid) {
       this.userService.saveUser(this.userProfile.getRawValue()).subscribe(
         response => {
-          console.log('hello');
-          console.log(response);
           this.reloadComponent();
-          return;
-        },
-        err => {
-          console.log('Hello Error ' + err);
-          return;
         }
       );
-    }
   }
 
   public reloadComponent() {
@@ -110,5 +87,4 @@ export class UserFormComponent {
         this.router.onSameUrlNavigation = 'reload';
         this.router.navigate([currentUrl]);
     }
-
 }

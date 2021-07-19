@@ -1,7 +1,15 @@
 <h1>User Information</h1>
 
 
-<div style="width: 70%">
+<sky-row>
+  <sky-column
+    screenSmall="1"
+  >
+  </sky-column>
+  <sky-column
+    screenSmall="10"
+  >
+<div style="width: 100%">
   <sky-toolbar>
     <sky-toolbar-item>
       <button class="sky-btn sky-btn-primary" id="edit-btn" (click)="openModal()">
@@ -18,3 +26,7 @@
     </ag-grid-angular>
   </sky-ag-grid-wrapper>
 </div>
+</sky-column>
+  <sky-column screenSmall="1">
+  </sky-column>
+</sky-row>

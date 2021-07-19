@@ -16,7 +16,7 @@ import {
   SkyKeyInfoModule,
   SkyStatusIndicatorModule
 } from '@skyux/indicators';
-import { SkyCardModule, SkyFluidGridModule, SkyToolbarModule } from '@skyux/layout';
+import { SkyCardModule, SkyFluidGridModule, SkyPageModule, SkyToolbarModule } from '@skyux/layout';
 import { SkySearchModule } from '@skyux/lookup';
 import { SkyModalModule } from '@skyux/modals';
 import {
@@ -50,7 +50,8 @@ import { UserService } from './services/user.service';
     SkyToolbarModule,
     SkyModalModule,
     SkyDropdownModule,
-    SkySearchModule
+    SkySearchModule,
+    SkyPageModule
   ],
   providers: [UserService]
 })

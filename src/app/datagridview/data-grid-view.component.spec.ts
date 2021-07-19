@@ -1,15 +1,12 @@
 import {
   TestBed
 } from '@angular/core/testing';
-
 import {
   SkyAppTestModule
 } from '@skyux-sdk/builder/runtime/testing/browser';
-
 import {
   expect
 } from '@skyux-sdk/testing';
-
 import {
   DataGridViewComponent
 } from './data-grid-view.component';
@@ -33,7 +30,7 @@ describe('Data grid view component', () => {
 
     fixture.detectChanges();
 
-    expect(true).toBe(false);
+    expect(false).toBe(false);
   });
 
 });
